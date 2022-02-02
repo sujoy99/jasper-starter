@@ -62,10 +62,10 @@ public class SwaggerConfig {
                 "Starter Pack API",
                 "API for web and mobile client",
                 "1.0",
-                "www.eatlbd.net",
+                "www.starter.org",
                 new Contact(
                         "Support",
-                        "eatlbd.net/api/support",
+                        "starter.org/api/support",
                         "info@eatlbd.net"
                 ),
                 "Apache License Version 2.0",

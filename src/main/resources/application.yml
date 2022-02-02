@@ -9,11 +9,14 @@ server:
 
 # Spring Configuration
 spring:
+  h2:
+    console:
+      enabled: 'true'
   application:
     name: starter-pack
 
   jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
+    date-format: yyyy-MM-dd
 
   # Database Configuration
   datasource:
@@ -67,7 +70,7 @@ spring:
 
     # Hibernate
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
