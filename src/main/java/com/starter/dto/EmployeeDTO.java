@@ -4,6 +4,7 @@ import com.starter.entity.Employee;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 
@@ -17,6 +18,7 @@ public class EmployeeDTO {
     private String designation;
     private Double salary;
     private Date doj;
+    private MultipartFile file;
 
     public static EmployeeDTO fromEntity(Employee employee) {
         EmployeeDTO dto = new EmployeeDTO();

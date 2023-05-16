@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="serial" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d2e84aab-e96b-408d-ae7d-f29ad681f3f5">
+    <subDataset name="MyCollectionDataSet" uuid="3d0d0c58-3de3-42b9-a825-01bea8014509">
+        <queryString>
+            <![CDATA[]]>
+        </queryString>
+        <field name="id1" class="java.lang.Integer"/>
+        <field name="id2" class="java.lang.Integer"/>
+    </subDataset>
+    <parameter name="CollectionBeanParam" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+    <parameter name="rowPerPage" class="java.lang.Integer"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <field name="id1" class="java.lang.Integer"/>
+    <field name="id2" class="java.lang.Integer"/>
+    <group name="ReportCount" isStartNewPage="true">
+        <groupExpression><![CDATA[new Boolean($V{COLUMN_COUNT}<$P{rowPerPage})]]></groupExpression>
+        <groupHeader>
+            <band height="2"/>
+        </groupHeader>
+    </group>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="44" splitType="Stretch"/>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+    <detail>
+        <band height="60" splitType="Stretch">
+            <rectangle>
+                <reportElement x="10" y="0" width="269" height="60" uuid="f77f7916-1d99-458a-a303-0f3328754cf3"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="12" y="2" width="267" height="28" uuid="27de1dbf-6240-453a-8049-57eef71b0e4e"/>
+                <textElement textAlignment="Left">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[ MBBS Admission Test 2023]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="12" y="30" width="68" height="27" uuid="5eade36e-1005-4ed3-b3f8-bde23ae7322c"/>
+                <textElement>
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <text><![CDATA[ Roll No:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="80" y="30" width="195" height="27" uuid="e9216b6b-8ef0-4acd-8686-e460b0141a4a">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc45f3d6-c463-4f0a-a910-82d301ef7dbe"/>
+                </reportElement>
+                <textElement>
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{id1}]]></textFieldExpression>
+            </textField>
+            <rectangle>
+                <reportElement x="280" y="0" width="269" height="60" uuid="336a5c49-4abb-4b79-b386-1edae959a110"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="283" y="2" width="263" height="28" uuid="7feb34e7-695e-433c-ad01-86177768e839"/>
+                <textElement textAlignment="Left">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[ MBBS Admission Test 2023]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="350" y="30" width="196" height="27" uuid="ad855e71-f92d-4a0f-91a5-46a3188d7600">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc45f3d6-c463-4f0a-a910-82d301ef7dbe"/>
+                </reportElement>
+                <textElement>
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{id2}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="283" y="30" width="67" height="27" uuid="1d993aeb-880f-4345-a3b9-23d24aa51d94"/>
+                <textElement>
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <text><![CDATA[ Roll No:]]></text>
+            </staticText>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
